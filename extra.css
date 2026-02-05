@@ -77,3 +77,253 @@
   color: #c5a059;
   font-size: 16px;
 }
+
+
+/* === SEÇÃO: OzenVitta Funciona Mesmo === */
+.resultados {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.titulo-resultados {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2b6c;
+  margin-bottom: 40px;
+}
+
+.galeria-resultados {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* não quebra em telas menores */
+}
+
+.card-resultado {
+  width: 200px;
+  background: #f4f6fb;
+  border-radius: 16px;
+  padding: 10px;
+}
+
+.card-resultado img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.labels span {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.labels .antes {
+  background: #00c2a8;
+}
+
+.labels .depois {
+  background: #4b5cff;
+}
+
+
+/* === SEÇÃO DE DEPOIMENTOS === */
+
+.depoimentos {
+  padding: 60px 20px;
+  background: #f9fafc;
+}
+
+.titulo-depoimentos {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2b6c;
+  margin-bottom: 40px;
+}
+
+.lista-depoimentos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.depoimento-item {
+  display: flex;
+  gap: 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.depoimento-item img {
+  width: 160px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.depoimento-item .conteudo h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: #00c2a8;
+}
+
+.depoimento-item .conteudo .nome {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.depoimento-item .conteudo p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .lista-depoimentos {
+    grid-template-columns: 1fr;
+  }
+
+  .depoimento-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .depoimento-item img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* Container do botão para garantir centralização */
+.cta-kits {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilização do Botão Ozenvitta */
+.btn-cta-kits {
+    background-color: #004aad; /* Azul principal Ozenvitta */
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 18px 35px;
+    border-radius: 50px; /* Bordas arredondadas */
+    text-align: center;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid #ffcc00; /* Borda dourada para destaque */
+    box-shadow: 0 0 0 0 rgba(0, 74, 173, 0.7);
+    animation: pulsar-ozen 2s infinite;
+}
+
+/* Efeito ao passar o mouse */
+.btn-cta-kits:hover {
+    background-color: #ffcc00; /* Inverte para dourado no hover */
+    color: #004aad;
+    transform: scale(1.05); /* Leve aumento */
+    animation: none; /* Para de pulsar ao interagir */
+}
+
+/* Animação Pulsar */
+@keyframes pulsar-ozen {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 74, 173, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 20px rgba(0, 74, 173, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 74, 173, 0);
+    }
+}
+
+
+/* Faz com que todo o scroll da página seja suave */
+html { scroll-behavior: smooth; }
+
+/* Ajuste opcional: Margem para o destino não ficar colado no topo */
+#kits-ozenvitta { scroll-margin-top: 80px;}
+
+
+
+/* === SEÇÃO DE PERGUNTAS E RESPOSTAS=== */
+
+.faq-section {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.faq-item {
+  border-radius: 12px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  background: #0f172a;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 18px 20px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: left;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+}
+
+.faq-question::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+  content: "−";
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: #020617;
+}
+
+.faq-answer p {
+  padding: 15px 20px 20px;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
