@@ -1,50 +1,24 @@
 /* 1. Removendo o espaço excessivo */
-.product-premium-section {
-  padding-bottom: 20px !important; /* Diminui a margem inferior da seção de cima */
-}
+.product-premium-section { padding-bottom: 20px !important; /* Diminui a margem inferior da seção de cima */ }
 
-.oz-detailed-description {
-  padding-top: 20px !important; /* Diminui a margem superior da seção de baixo */
-}
+.oz-detailed-description { padding-top: 20px !important; /* Diminui a margem superior da seção de baixo */ }
 
 /* 2. Estilizando o Separador */
-.oz-section-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 850px; /* Alinhado com a largura da sua descrição */
-  margin: 0 auto;
-  gap: 20px;
-}
+.oz-section-divider { display: flex; align-items: center; justify-content: center; max-width: 850px; /* Alinhado com a largura da sua descrição */
+  margin: 0 auto; gap: 20px; }
 
-.oz-line {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(to var(--direction, right), transparent, rgba(197, 160, 89, 0.5), transparent);
-  background: linear-gradient(90deg, transparent 0%, rgba(197, 160, 89, 0.4) 50%, transparent 100%);
-}
+.oz-line { flex: 1; height: 1px; background: linear-gradient(to var(--direction, right), transparent, rgba(197, 160, 89, 0.5), transparent);
+  background: linear-gradient(90deg, transparent 0%, rgba(197, 160, 89, 0.4) 50%, transparent 100%); }
 
-.oz-icon {
-  color: #c5a059; /* Dourado OzenVitta */
-  font-size: 18px;
-  filter: drop-shadow(0 0 5px rgba(197, 160, 89, 0.3));
-}
+.oz-icon { color: #c5a059; /* Dourado OzenVitta */ font-size: 18px; filter: drop-shadow(0 0 5px rgba(197, 160, 89, 0.3)); }
 
 /* 3. Ajuste de Espaçamento no Título da Descrição */
-.oz-section-header {
-  margin-top: 0; /* Remove qualquer margem extra que o título possa ter */
-  margin-bottom: 30px;
-}
+.oz-section-header {  margin-top: 0; /* Remove qualquer margem extra que o título possa ter */margin-bottom: 30px; }
 
+/* 4. Reduz o espaço final da seção anterior (descrição) */
+.oz-detailed-description { padding-bottom: 0 !important; margin-bottom: 0 !important; }
 
-
-/* Reduz o espaço final da seção anterior (descrição) */
-.oz-detailed-description {
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-/* Estiliza o novo separador de opções */
+/* 5. Estiliza o novo separador de opções */
 .oz-options-divider {
   display: flex;
   align-items: center;
@@ -326,4 +300,5 @@ html { scroll-behavior: smooth; }
   color: #cbd5f5;
   line-height: 1.6;
 }
+
 
